@@ -37,6 +37,7 @@ internal final class PaymentsController {
     private lazy var actionComponent: AdyenActionComponent = {
         let handler = AdyenActionComponent()
         handler.redirectComponentStyle = dropInComponentStyle.redirectComponent
+        handler.voucherComponentStyle = dropInComponentStyle.voucherComponent
         handler.delegate = self
         handler.presentationDelegate = self
         handler.environment = environment
